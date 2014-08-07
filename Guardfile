@@ -13,5 +13,5 @@ notification :terminal_notifier
 #  * 'just' rspec: 'rspec'
 guard :rspec, cmd: 'bundle exec rspec', notification: true do
   watch(%r{^spec/.+_spec\.rb$})
-  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
+  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/#{m[1]}_spec.rb" }
 end
